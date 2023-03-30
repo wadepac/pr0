@@ -1,4 +1,9 @@
 ## OU
+dn: ou=competitors,dc=msk,dc=skills
+objectClass: top
+objectClass: organizationalUnit
+ou: experts
+
 dn: ou=experts,dc=msk,dc=skills
 objectClass: top
 objectClass: organizationalUnit
@@ -10,15 +15,34 @@ objectClass: organizationalUnit
 ou: managers
 
 ## groups
+dn: cn=competitors,ou=competitors,dc=msk,dc=skills
+objectClass: top
+objectClass: posixGroup
+gidNumber: 10010
+
 dn: cn=experts,ou=experts,dc=msk,dc=skills
 objectClass: top
 objectClass: posixGroup
+gidNumber: 10011
 
 dn: cn=managers,ou=managers,dc=msk,dc=skills
 objectClass: top
 objectClass: posixGroup
-
+gidNumber: 10012
 ## users
+dn: cn=competitor1,ou=competitors,dc=msk,dc=skills
+objectClass: top
+objectClass: account
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: competitor1
+uid: competitor1
+host: compX-srv1.msk.skills
+uidNumber: 10001
+gidNumber: 10001
+homeDirectory: /home/competitor1
+userPassword: P@ssw0rd
+loginShell: /bin/bash
 
 dn: cn=expert1,ou=experts,dc=msk,dc=skills
 objectClass: top
