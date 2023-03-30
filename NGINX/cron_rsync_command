@@ -1,0 +1,1 @@
+*/1 * * * * rsync -au /var/www/task.html user@10.0.0.3:/var/www/task.html

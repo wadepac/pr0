@@ -11,8 +11,8 @@ $TTL	604800
 	MX	0	@	
 logs	IN	CNAME	@
 
-comp3-srv2	IN	A	192.168.3.2
-comp3-srv3	IN	A	192.168.3.3
+comp3-srv2	IN	A	10.0.0.3
+comp3-srv3	IN	A	10.0.0.4
 split		IN	A	3.3.3.3
 
 web1		IN	A	10.0.0.2
