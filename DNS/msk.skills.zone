@@ -1,0 +1,19 @@
+$TTL	604800
+@	IN	SOA	msk.skills. root.msk.skills. (
+			      1		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+@	IN	NS	comp3-srv1.
+	IN	A	192.168.3.1
+	MX	0	@	
+logs	IN	CNAME	@
+
+comp3-srv2	IN	A	192.168.3.2
+comp3-srv3	IN	A	192.168.3.3
+split		IN	A	2.2.2.2
+split		IN	A	3.3.3.3
+
+web		IN	CNAME	comp3-srv3.msk.skills.

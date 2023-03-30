@@ -1,0 +1,13 @@
+dn: ou=competitors,dc=msk,dc=skills
+objectClass: organizationalUnit
+ou: competitors
+
+dn: ou=experts,dc=msk,dc=skills
+objectClass: top
+objectClass: organizationalUnit
+ou: experts
+
+dn: ou=managers,dc=msk,dc=skills
+objectClass: top
+objectClass: organizationalUnit
+ou: managers

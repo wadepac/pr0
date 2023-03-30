@@ -1,0 +1,11 @@
+dn: cn=competitors,ou=competitors,dc=msk,dc=skills
+objectClass: top
+objectClass: posixGroup
+
+dn: cn=experts,ou=experts,dc=msk,dc=skills
+objectClass: top
+objectClass: posixGroup
+
+dn: cn=managers,ou=managers,dc=msk,dc=skills
+objectClass: top
+objectClass: posixGroup
