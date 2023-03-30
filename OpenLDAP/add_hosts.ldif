@@ -1,0 +1,22 @@
+dn: cn=manager1,ou=managers,dc=msk,dc=skills
+changetype: modify
+add: objectClass
+memberuid: hostObject
+add: host
+host: compX-srv1.msk.skills
+host: compX-srv3.msk.skills
+
+dn: cn=competitor1,ou=competitors,dc=msk,dc=skills
+changetype: modify
+add: objectClass
+memberuid: hostObject
+add: host
+host: compX-srv1.msk.skills
+
+dn: cn=expert1,ou=experts,dc=msk,dc=skills
+changetype: modify
+add: objectClass
+memberuid: hostObject
+add: host
+host: compX-srv1.msk.skills
+host: compX-srv3.msk.skills

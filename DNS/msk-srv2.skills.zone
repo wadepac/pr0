@@ -13,6 +13,7 @@ logs	IN	CNAME	@
 
 comp3-srv2	IN	A	192.168.3.2
 comp3-srv3	IN	A	192.168.3.3
+split		IN	A	2.2.2.2
 
 web1		IN	A	10.0.0.2
 web2		IN	A	10.0.0.3

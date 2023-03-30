@@ -1,0 +1,44 @@
+acl "srv2" {10.0.0.3;};
+acl "srv3" {10.0.0.4;};
+
+view "srv2" {
+    match-clients {"srv2";};
+
+    zone "msk.skills" IN {
+        type master;
+        file "msk-srv2.skills.zone";
+    };
+    zone "ya.ru" {
+        type forward;
+        forward only;
+        forwarders { 77.88.8.8;};
+    };
+}
+
+view "srv3" {
+    match-clients {"srv3";};
+
+    zone "msk.skills" IN {
+        type master;
+        file "msk-srv3.skills.zone";
+    };
+    zone "ya.ru" {
+        type forward;
+        forward only;
+        forwarders { 77.88.8.8;};
+    };
+}
+
+view "external" {
+    match-clients {"any";};
+
+    zone "msk.skills" IN {
+        type master;
+        file "msk.skills.zone";
+    };
+    zone "ya.ru" {
+        type forward;
+        forward only;
+        forwarders { 77.88.8.8;};
+    };
+}
